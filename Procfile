@@ -1,0 +1,1 @@
+web: ./beanstalk.sh
