@@ -3,9 +3,10 @@ This is a Neo4j Exercise
 
 
 To Build:  mvn clean package
-To run: target/bin/webapp (unix) 
 
-target/bin/webapp.bat (windows)
+
+To run: target/bin/webapp (unix),  target/bin/webapp.bat (windows)
+
 
 To configure database
 
