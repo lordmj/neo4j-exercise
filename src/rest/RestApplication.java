@@ -118,12 +118,24 @@ public class RestApplication {
 		//If not, see if the token is in the database
 		if(driver == null){
 
-			String masterUser = "User";
-			String masterPassword = "Password";
-			String dbUrl = "";
+			String masterUser = "neo4j";
+			String masterPassword = "pushdowns-jurisdictions-signs";
+			String dbUrl = "bolt://35.175.65.147:36990";
 
+			if(System.getenv("neo4j_exercise_url") != null) {
+				dbUrl = System.getenv("neo4j_exercise_url");
+			}
+			
+			if(System.getenv("neo4j_exercise_user") != null) {
+				masterUser = System.getenv("neo4j_exercise_user");
+			}
+			
+			if(System.getenv("neo4j_exercise_password") != null) {
+				masterPassword = System.getenv("neo4j_exercise_password");
+			}
+			
 		    Config noSSL = Config.build().withEncryptionLevel(Config.EncryptionLevel.NONE).toConfig();
-	        driver = GraphDatabase.driver("bolt://35.175.65.147:36990",AuthTokens.basic("neo4j", "pushdowns-jurisdictions-signs"),noSSL);
+	        driver = GraphDatabase.driver(dbUrl,AuthTokens.basic(masterUser, masterPassword),noSSL);
 			registerShutdownHook(driver);
 		}			
 
