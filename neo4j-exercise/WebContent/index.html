@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Employees</title>
+<link rel="stylesheet" type="text/css" href="/css/swagger-ui.css">
+</head>
+<body>
+
+<div id="swagger-ui"></div>
+
+<script src="/js/swagger-ui-bundle.js"></script>
+<script src="/js/swagger-ui-standalone-preset.js"></script>
+
+<script>
+
+  const ui = SwaggerUIBundle({
+    url: "/api/openapi.json",
+    dom_id: '#swagger-ui',
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ]
+  })
+
+  window.ui = ui
+
+</script>
+</body>
+</html>
