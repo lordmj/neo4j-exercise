@@ -42,12 +42,12 @@ public class RestApplication {
 			
 			Map<String, Object> props = new HashMap<String, Object>();
 			props.put("emp_id", id);
-			props.put("emp_name", name);
+			props.put("name", name);
 			
 			Map<String, Object> superProps = new HashMap<String, Object>();
 			superProps.put("props", props);
 			
-			StatementResult result = session.run("CREATE (employee:EMPLOYEE {props}) RETURN employee.emp_id AS emp_id, employee.emp_name AS emp_name", superProps);
+			StatementResult result = session.run("CREATE (employee:EMPLOYEE {props}) RETURN employee.emp_id AS emp_id, employee.name AS emp_name", superProps);
 			
 			JsonArrayBuilder arrBuilder = Json.createArrayBuilder();
 			
@@ -83,7 +83,7 @@ public class RestApplication {
 		
 		try(Session session = getSession();){
 		
-			StatementResult result = session.run("MATCH (employee:EMPLOYEE) return employee.emp_id AS emp_id, employee.emp_name AS emp_name");
+			StatementResult result = session.run("MATCH (employee:EMPLOYEE) return employee.emp_id AS emp_id, employee.name AS emp_name");
 			
 			JsonArrayBuilder arrBuilder = Json.createArrayBuilder();
 			
