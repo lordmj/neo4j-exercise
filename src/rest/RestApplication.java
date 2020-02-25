@@ -118,9 +118,9 @@ public class RestApplication {
 		//If not, see if the token is in the database
 		if(driver == null){
 
-			String masterUser = "neo4j";
-			String masterPassword = "pushdowns-jurisdictions-signs";
-			String dbUrl = "bolt://35.175.65.147:36990";
+			String masterUser = "";
+			String masterPassword = "";
+			String dbUrl = "";
 
 			if(System.getenv("neo4j_exercise_url") != null) {
 				dbUrl = System.getenv("neo4j_exercise_url");
