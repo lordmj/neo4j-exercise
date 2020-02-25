@@ -1,1 +1,1 @@
-web: ./beanstalk.sh
+web: target/bin/webapp
