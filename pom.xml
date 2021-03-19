@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   
 	<properties>
-		<tomcat.version>8.5.51</tomcat.version>
+		<tomcat.version>10.0.4</tomcat.version>
 		<postgresql.jdbc.version>9.4.1212</postgresql.jdbc.version>
 	</properties>  
   
