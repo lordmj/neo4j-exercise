@@ -6,7 +6,7 @@
   
 	<properties>
 		<tomcat.version>8.5.51</tomcat.version>
-		<postgresql.jdbc.version>9.4.1212</postgresql.jdbc.version>
+		<postgresql.jdbc.version>42.2.25</postgresql.jdbc.version>
 	</properties>  
   
   
